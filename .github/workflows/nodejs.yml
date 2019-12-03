@@ -16,6 +16,6 @@ jobs:
     - name: npm install, test
       run: |
         npm install
-        npm pipeline
+        npm run pipeline
       env:
         CI: true
