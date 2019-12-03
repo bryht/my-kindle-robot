@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "test": "rimraf screenshots/*.png & jest --config jest.config.js --runInBand --watchAll --bail",
+    "pipeline": "rimraf screenshots/*.png & jest --config jest.config.pipeline.js --runInBand --watchAll --bail"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^24.0.18",
+    "@types/puppeteer": "^1.20.1",
+    "babel-jest": "^24.8.0",
+    "fs-extra": "^8.1.0",
+    "gmail-tester": "^1.1.4",
+    "jest": "^24.8.0",
+    "path": "^0.12.7",
+    "puppeteer": "^1.20.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1"
+  }
+}
