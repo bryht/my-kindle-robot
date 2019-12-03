@@ -5,7 +5,7 @@ let helper: BrowserHelper;
 beforeEach(async () => {
     helper = new BrowserHelper();
     await helper.init();
-});
+}, 30 * 1000);
 
 test('send to kindle', async () => {
 
@@ -27,7 +27,7 @@ test('send to kindle', async () => {
     await helper.waitFor(3);
     await helper.clickByText('Economist/China');
     await helper.clickByText('Send to Kindle');
-    
+
 }, 3 * 60 * 1000);
 
 afterEach(async () => {
