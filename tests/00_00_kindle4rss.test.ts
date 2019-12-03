@@ -7,7 +7,7 @@ beforeEach(async () => {
     await helper.init();
 });
 
-test('register', async () => {
+test('send to kindle', async () => {
 
     await helper.goto('https://kindle4rss.com/');
     await helper.clickByText('Sign in with email');
