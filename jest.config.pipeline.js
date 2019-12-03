@@ -6,7 +6,7 @@ module.exports = {
         browser: {
             headless: true,
             devtools: false,
-            timeout: 5000//here close timeout to have time to check issues
+            timeout: 30000//here close timeout to have time to check issues
         }
     }
 };

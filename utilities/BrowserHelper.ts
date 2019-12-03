@@ -88,7 +88,7 @@ export class BrowserHelper {
     }
 
     async type(selector: string, value: string) {
-        await this.log(`${selector}--${value}`);
+        await this.log(`${selector}`);
         await this.page.waitForSelector(selector);
         await this.page.type(selector, value);
     }

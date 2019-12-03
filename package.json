@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "rimraf screenshots/*.png & jest --config jest.config.js --runInBand --watchAll --bail",
-    "pipeline": "rimraf screenshots/*.png & jest --config jest.config.pipeline.js --runInBand --watchAll --bail"
+    "pipeline": "jest --config jest.config.pipeline.js --runInBand --bail"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",
