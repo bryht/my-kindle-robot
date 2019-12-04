@@ -1,9 +1,9 @@
-name: Node CI
+name: Node Eco Science
 
 on:
   push:
   schedule:
-    - cron:  '0 1 * * *'
+    - cron:  '* * * * 3'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +16,6 @@ jobs:
     - name: npm install, test
       run: |
         npm install
-        npm run pipeline -- --email=${{secrets.email}} --password=${{secrets.password}}  
+        npm run pipeline -- --email=${{secrets.email}} --password=${{secrets.password}} --topic='Economist/Science & Technology'
       env:
         CI: true

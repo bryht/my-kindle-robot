@@ -11,6 +11,7 @@ test('send to kindle', async () => {
 
     var email = process.argv.find(p => p.indexOf('email') > 0).split('=')[1];
     var password = process.argv.find(p => p.indexOf('password') > 0).split('=')[1];
+    var topic =process.argv.find(p=>p.indexOf('topic')>0).split('=')[1];
     await helper.goto('https://kindle4rss.com/');
     await helper.clickByText('Sign in with email');
     await helper.type('#field-email_address', email);
@@ -19,14 +20,9 @@ test('send to kindle', async () => {
     await helper.waitFor(3);
     await helper.waitForText('Logout');
 
-    await helper.clickByText('Hacker News');
+    await helper.clickByText(topic);
     await helper.clickByText('Send to Kindle');
-    await helper.waitFor(3);
-    await helper.clickByText('Economist/Science & Technology');
-    await helper.clickByText('Send to Kindle');
-    await helper.waitFor(3);
-    await helper.clickByText('Economist/China');
-    await helper.clickByText('Send to Kindle');
+    await helper.waitFor(5);
 
 }, 3 * 60 * 1000);
 

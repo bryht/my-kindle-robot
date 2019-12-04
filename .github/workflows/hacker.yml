@@ -1,0 +1,21 @@
+name: Node Hacker
+
+on:
+  push:
+  schedule:
+    - cron:  '6 * * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install, test
+      run: |
+        npm install
+        npm run pipeline -- --email=${{secrets.email}} --password=${{secrets.password}}  --topic='Hacker News'
+      env:
+        CI: true
