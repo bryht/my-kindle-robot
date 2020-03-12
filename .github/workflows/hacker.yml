@@ -2,8 +2,8 @@ name: Node Hacker
 
 on:
   push:
-  schedule:
-    - cron:  '6 * * * *'
+#  schedule:
+#    - cron:  '6 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
